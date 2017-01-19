@@ -1,0 +1,186 @@
+@font-face {
+    font-family: GilroyExtraBold;
+    src: url(fonts/GilroyExtraBold.eot); /* Для IE5-8 */
+    src: url(fonts/GilroyExtraBold.ttf); /* Для остальных браузеров */
+   }
+@font-face {
+    font-family: GilroyLight;
+    src: url(fonts/GilroyLight.eot);
+    src: url(fonts/GilroyLight.ttf);
+   }
+@font-face {
+    font-family: RobotoLight;
+    src: url(fonts/RobotoLight.eot);
+    src: url(fonts/RobotoLight.ttf);
+   }
+@font-face {
+    font-family: RobotoRegular;
+    src: url(fonts/RobotoRegular.eot);
+    src: url(fonts/RobotoRegular.ttf);
+   }
+
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+h1, h2 {
+    font-family: 'GilroyExtraBold', sans-serif;
+    font-weight: 600;
+}
+h3 {
+	font-family: 'RobotoRegular', sans-serif;
+    font-weight: 700;}
+h1 {
+    color: #fff;
+    line-height: 1.2em;
+    font-size: 4em;
+    text-align: left;
+    text-transform: uppercase;
+    margin: 0px 0px 0px -3px;
+    padding: 0px;
+}
+
+.div1 {
+    background-image: url(../img/bg.png);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #4f4f4f;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 99;
+    margin: 0px auto;
+    display: block;
+}
+  #menuwrapper{
+    position: relative;
+    height: 20%;
+    padding: 0 5%;
+    line-height: 3em;
+    top: 13%;
+}
+	.logo {
+    background: url(../img/logo.png);
+    background-size: cover;
+    max-width: 20%;
+    width: 15%;
+    height: 100%;
+    margin: 0 auto;
+    z-index: 998;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    float: right;
+}
+
+	.menu {
+    line-height: 1.5em;
+    text-align: right;
+    position: relative;
+    float: right;
+    max-width: 80%;
+}
+	.menu>a {
+    color: #FFF;
+    font-family: 'RobotoLight', sans-serif;
+    font-size: 1.375em;
+    text-align: center;
+    margin-right: 1em;
+    padding: 10px;
+    text-decoration: none;
+}
+	.menu>a:hover {
+    border: 2px #fff solid;
+    margin-right: 20px;
+    margin-left: -2px;
+}
+	.menu .tel  {
+    display: inline-block;
+    margin-left: 4em;
+    margin-right: 2em;}
+	.menu .tel:hover  {
+    border: none;
+    margin-left: 4em;
+    margin-right: 2em;}
+	.menu .RU {border: 2px #fff solid;margin-right: 0em;}
+	.menu .EN {opacity:0.5; margin-right: 0em;}
+	.menu .RU:hover {
+    margin-right: 0px;
+    margin-left: 0px;}
+	.menu .EN:hover{
+    opacity:1;
+    border: none;
+    margin-right: 0px;
+    margin-left: 0px;}
+  
+  .div1content{
+    position: absolute;
+    max-width: 900px;
+    padding: 0 5%;
+    top: 36%;
+}
+  .div1p {
+    color: #fff;
+    line-height: 1.6em;
+    font-family: 'RobotoLight', sans-serif;
+    font-size: 1.525em;
+    text-align: left;
+    max-width: 500px;
+    margin-top: 2em;
+    font-weight: 100;}
+
+
+  .scrollbtn1>a, .scrollbtn2>a{
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+    bottom: 0px;
+    display: inline-block;
+    opacity: 0.3;
+}
+  .scrollbtn1>a>span{
+    color: #fff;
+    font-family: 'RobotoLight', sans-serif;
+    font-size: 1em;
+    text-align: center;
+    font-weight: 100;
+}
+.scrollbtn2>a>span{
+    color: #000;
+    font-family: 'RobotoLight', sans-serif;
+    font-size: 1em;
+    text-align: center;
+    font-weight: 100;
+}
+  .scrollbtn1>a>hr, .scrollbtn2>a>hr{
+    height: 60px;
+    width: 1px;
+    position: relative;
+}
+  .scrollbtn1 {
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: 0px;
+}
+  .scrollbtn2 {
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    top: 190%;
+}
+
+
+
+
+.div2{
+    background-color: #fff;
+    min-height: 100%;
+    width: 100%;}
+@media (max-width:1300px){}
