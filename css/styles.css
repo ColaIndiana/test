@@ -1,20 +1,22 @@
+/*шрифты*/
+
 @font-face {
-    font-family: GilroyExtraBold;
+    font-family: 'GilroyExtraBold';
     src: url(fonts/GilroyExtraBold.eot); /* ƒл€ IE5-8 */
     src: url(fonts/GilroyExtraBold.ttf); /* ƒл€ остальных браузеров */
    }
 @font-face {
-    font-family: GilroyLight;
+    font-family: 'GilroyLight';
     src: url(fonts/GilroyLight.eot);
     src: url(fonts/GilroyLight.ttf);
    }
 @font-face {
-    font-family: RobotoLight;
+    font-family: 'RobotoLight';
     src: url(fonts/RobotoLight.eot);
     src: url(fonts/RobotoLight.ttf);
    }
 @font-face {
-    font-family: RobotoRegular;
+    font-family: 'RobotoRegular';
     src: url(fonts/RobotoRegular.eot);
     src: url(fonts/RobotoRegular.ttf);
    }
@@ -42,6 +44,48 @@ h1 {
     padding: 0px;
 }
 
+/*скроллы*/
+  .scrollbtn1>a, .scrollbtn2>a{
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+    bottom: 0px;
+    display: inline-block;
+    opacity: 0.3;
+}
+  .scrollbtn1>a>span{
+    color: #fff;
+    font-family: 'RobotoLight', sans-serif;
+    font-size: 1em;
+    text-align: center;
+    font-weight: 100;
+}
+  .scrollbtn2>a>span{
+    color: #000;
+    font-family: 'RobotoLight', sans-serif;
+    font-size: 1em;
+    text-align: center;
+    font-weight: 100;
+}
+  .scrollbtn1>a>hr, .scrollbtn2>a>hr{
+    height: 60px;
+    width: 1px;
+    position: relative;
+}
+  .scrollbtn1 {
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: 0px;
+}
+  .scrollbtn2 {
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    top: 110%;
+}
+
+/*первый блок*/
 .div1 {
     background-image: url(../img/bg.png);
     -webkit-background-size: cover;
@@ -51,19 +95,21 @@ h1 {
     background-position: center center;
     background-repeat: no-repeat;
     background-color: #4f4f4f;
-    height: 100%;
+    min-height: 100%;
+    height: 768px;
     width: 100%;
     position: relative;
     z-index: 99;
     margin: 0px auto;
     display: block;
 }
+	/*логотип и меню*/
   #menuwrapper{
     position: relative;
     height: 20%;
     padding: 0 5%;
     line-height: 3em;
-    top: 13%;
+    top: 8%;
 }
 	.logo {
     background: url(../img/logo.png);
@@ -78,7 +124,6 @@ h1 {
     position: absolute;
     float: right;
 }
-
 	.menu {
     line-height: 1.5em;
     text-align: right;
@@ -118,14 +163,14 @@ h1 {
     border: none;
     margin-right: 0px;
     margin-left: 0px;}
-  
-  .div1content{
+ 	/*заголовок и текст*/ 
+	.div1content{
     position: absolute;
     max-width: 900px;
     padding: 0 5%;
-    top: 36%;
+    top: 30%;
 }
-  .div1p {
+	.div1p {
     color: #fff;
     line-height: 1.6em;
     font-family: 'RobotoLight', sans-serif;
@@ -135,52 +180,585 @@ h1 {
     margin-top: 2em;
     font-weight: 100;}
 
-
-  .scrollbtn1>a, .scrollbtn2>a{
-    text-decoration: none;
-    margin: 0px;
-    padding: 0px;
-    bottom: 0px;
-    display: inline-block;
-    opacity: 0.3;
+/*второй блок*/
+.div2{
+	background-color: #FFF;
+    position: absolute;
+    min-height: 100%;
+    height: 768px;
+    width: 100%;
 }
-  .scrollbtn1>a>span{
-    color: #fff;
+	.div2 #analitics {
+    width: 25%;
+    margin-left: 10%;
+    position: absolute;
+	margin-top: 50px;
+}
+	.div2 #strategy {
+    width: 25%;
+    margin-left: 40%;
+    position: absolute;
+	margin-top: 50px;
+}
+	.div2 #smm {
+    width: 25%;
+    margin-left: 70%;
+    position: absolute;
+	margin-top: 50px;
+}
+	.div2 #technologies{
+    width: 25%;
+    top: 60%;
+    margin-left: 25%;
+    position: absolute;
+	margin-top: 30px;
+}
+	.div2 #design{
+    width: 25%;
+    top: 60%;
+    margin-left: 55%;
+    position: absolute;
+	margin-top: 30px;
+}
+	/*иконки блоков*/	
+	.DIV2icon {
+  width: 52px;
+  height: 48px;
+  background: url(../img/DIV2icon.png) no-repeat;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+  margin-left: -2px;
+}
+	#analitics .DIV2icon {
+  background-position: 0 0px; /* по умолчанию */
+}
+	#strategy .DIV2icon {
+  background-position: 0 -48px; /* вверх на 48px */
+}
+	#smm .DIV2icon {
+  background-position: 0 -97px; /* вверх на 97px */
+}
+	#technologies .DIV2icon {
+  background-position: 0 -145px; /* вверх на 145px */
+}
+	#design .DIV2icon {
+  background-position: 0 -192px; /* вверх на 192px */
+}
+	/*наполнение блоков*/
+	h2{
+    font-family: 'RobotoRegular', sans-serif;
+    color: #000;
+    line-height: 109%;
+    letter-spacing: 1px;
+    margin: 5% 0 0 44%;
+    min-width: 20%;
+    font-weight: 600;
+    font-size: 1.8em;
+}
+	.titelaboutus {
+    font-family: 'RobotoRegular', sans-serif;
+    position: relative;
+    color: #000;
+    line-height: 109%;
+    letter-spacing: 1px;
+	margin-top: 20px;
+	font-size: 1em;
+	font-weight: 600;
+}
+	.tekstaboutus {
     font-family: 'RobotoLight', sans-serif;
-    font-size: 1em;
-    text-align: center;
-    font-weight: 100;
+    position: relative;
+    color: #000;
+    margin-top: 20px;
+	font-size: 0.8em;
+	line-height: 150%;
 }
-.scrollbtn2>a>span{
+
+/*третий блок*/
+.div3 {
+    background-color: #FFF;
+    min-height: 70%;
+    position: absolute;
+    width: 100%;
+    top: 1700px;
+}
+	.div3 .project1 { background-color: #bdcbd7;
+    min-height: 450px;
+    position: relative;
+    width: 100%;
+}
+	.div3 .project2 { background-color: #f8d000;
+    min-height: 450px;
+    position: relative;
+    width: 100%;
+}
+	.div3 .project3 { background: #fff url(../img/monitor.png) left center no-repeat;
+	-webkit-background-size: auto 70%;
+    -moz-background-size: auto 70%;
+    -o-background-size: auto 70%;
+    background-size: auto 70%;
+    min-height: 450px;
+    position: relative;
+    width: 100%;
+}
+	.div3 .allprojects {background: #303030 url(../img/ShapesAllProjects.png) center center no-repeat; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	min-height: 100px;
+    position: relative;
+    width: 100%;
+}
+	/*ссылки-кнопки*/
+	.prjlink{
+    background: transparent url(../img/arrow000.png) 154px center no-repeat;
+    border: 2px #000 solid;
+    height: 24px;
+    width: 163px;
+    text-align: left;
+    display: block;
     color: #000;
     font-family: 'RobotoLight', sans-serif;
     font-size: 1em;
-    text-align: center;
-    font-weight: 100;
+    padding: 10px 20px;
+    text-decoration: none;
+    line-height: 142%;
 }
-  .scrollbtn1>a>hr, .scrollbtn2>a>hr{
-    height: 60px;
-    width: 1px;
+	.prjlink:hover {
+    background: #000 url(../img/arrowfff.png) 154px center no-repeat;
+    border: 2px #000 solid;
+    color: #fff;
+}
+	.div3 .allprojects >a{
+    background: transparent url(../img/arrowfff.png) 165px center no-repeat;
+    border: 2px #fff solid;
+    height: 24px;
+    width: 173px;
+    text-align: left;
+    display: block;
+    color: #fff;
+    font-family: 'RobotoLight', sans-serif;
+    font-size: 1em;
+    padding: 10px 20px;
+    text-decoration: none;
+    line-height: 142%;
     position: relative;
+    top: 24px;
+    left: 42%;
 }
-  .scrollbtn1 {
+	.div3 .allprojects >a:hover {
+    background: #fff url(../img/arrow000.png) 165px center no-repeat;
+    border: 2px #fff solid;
+    color: #000;
+}
+
+	.prjtitel {
+    font-family: 'GilroyExtraBold', sans-serif;
+    position: relative;
+    color: #000;
+    line-height: 109%;
+    letter-spacing: 1px;
+	margin-top: 20px;
+	font-size: 1.4em;
+	font-weight: 600;
+}
+	.prjtekst {
+    font-family: 'RobotoLight', sans-serif;
+    position: relative;
+    color: #000;
+    margin-top: 40px;
+    margin-bottom: 40px;
+	font-size: 0.8em;
+	line-height: 200%;
+}
+	#prjsiteimg{
+    background: transparent url(../img/site.png) 0 0 no-repeat;
+    z-index: 59;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    max-height: 120%;
+    max-width: 74%;
+    height: 540px;
+    width: 686px;
     position: absolute;
-    left: 50%;
-    right: 50%;
-    bottom: 0px;
+    top: 30px;
 }
-  .scrollbtn2 {
+	#prjphoneimg{
+    background: transparent url(../img/phone.png) 0 0 no-repeat;
+    z-index: 59;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    max-height: 167%;
+    max-width: 102%;
+    height: 751px;
+    width: 946px;
     position: absolute;
-    left: 50%;
-    right: 50%;
-    top: 190%;
+    top: 30px;
+    right: 176px;
+}
+	.prj1content{
+    float: right;
+    z-index: 60;
+    position: relative;
+    margin-top: 100px;
+    right: 22%;
+}
+	.prj2content{
+    float: left;
+    z-index: 60;
+    position: relative;
+    margin-top: 100px;
+    left: 22%;
+}
+	.prj3content{
+    float: left;
+    z-index: 60;
+    position: relative;
+    margin-top: 100px;
+    left: 30%;
 }
 
-
-
-
-.div2{
-    background-color: #fff;
+/*четвертый блок*/
+.div4{
+    background: #f1f2f2 url(../img/6.png) 40% top no-repeat;
+		-webkit-background-size: auto 25%;
+    -moz-background-size: auto 25%;
+    -o-background-size: auto 25%;
+    background-size: auto 25%;
+    position: absolute;
     min-height: 100%;
-    width: 100%;}
-@media (max-width:1300px){}
+    height: 655px;
+    width: 100%;
+	top: 3150px;
+}
+	.div4>h2{
+    position: relative;
+    top: 109px;
+    left: 541px;
+	margin:0px;
+	width: 370px;
+}
+	.services{
+    position: relative;
+    top: 190px;
+    max-width: 100%;
+    padding-left: 7%;
+}
+	.services>div{
+    width: 26%;
+    margin-right: 7%;
+    margin-top: 60px;
+    float: left;
+}
+	.DIV4icon {
+    width: 38px;
+    height: 3px;
+    margin: 0px;
+    background: url(../img/redline.png) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+	.titelservice {
+    font-family: 'RobotoRegular', sans-serif;
+    color: #000;
+    line-height: 109%;
+    letter-spacing: 1px;
+    margin-top: -9px;
+    margin-left: 52px;
+    font-size: 0.8em;
+    font-weight: 600;
+}
+	.tekstservice {
+    font-family: 'RobotoLight', sans-serif;
+    color: #000;
+    margin-top: 20px;
+    font-size: 0.79em;
+    line-height: 180%;
+    padding-left: 20px;
+	width: 105%;
+}
+
+/*пятый блок*/
+.div5{
+    background: #fff url(../img/bgKlient.png) 0 97% no-repeat;
+	-webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+	position: absolute;
+    min-height: 100%;
+    height: 1300px;
+    width: 100%;
+	top: 3850px;
+}
+
+	.klients_ul {
+    margin: 0;
+    padding: 0;
+    margin-left: 16%;
+    margin-right: 16%;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+	.klients_li{
+    vertical-align: middle;
+    display: inline-block;
+    text-align: center;
+}
+	ul li:first-child {
+    margin: 0;
+}
+	ul li {
+    margin: 5px 0 0;
+    padding: 0 0 0 4px;
+}
+	.klients_link{
+    text-decoration: none;
+    position: relative;
+    display: block;
+    width: 200px;
+    height: 149px;
+}
+	.klients_img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    margin: auto;
+}
+	img {
+    border: 0;
+}
+
+	.DIV5icon {
+    width: 38px;
+    height: 3px;
+    margin: 0px;
+    background: url(../img/redline.png) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	left: 49%;
+    position: absolute;
+}
+	.DIV5quote{
+    font-family: 'RobotoLight', sans-serif;
+    color: #000;
+    font-size: 1em;
+    position: relative;
+    height: 50px;
+    line-height: 1.5em;
+    padding: 60px 0 60px;
+}
+	/*видео*/
+	.div5>video{
+    bottom: 80px;
+    position: absolute;
+}
+	.video_div{
+    position: absolute;
+    width: 30%;
+    height: 10%;
+    right: 16%;
+    margin-top: 14%;
+}
+	.video_div>a{
+    position: relative;
+    width: 7%;
+    float: right;
+    margin-top: -26%;
+    margin-right: -7%;
+}
+	.video_text{
+    position: relative;
+    width: 80%;}
+	.video_text>h3{
+	font-family: 'RobotoRegular', sans-serif;
+    color: #000;
+    font-size: 0.8em;
+    font-weight: 600;
+}
+	.video_text>p{
+	font-family: 'RobotoLight', sans-serif;
+    color: #000;
+    margin-top: 20px;
+    font-size: 0.79em;
+    line-height: 180%;
+	width: 105%;
+}
+
+
+/*шестой блок*/
+.div6 {
+    background: #4f4f4f url(../img/bgbottom.png) center center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 50%;
+    position: absolute;
+    width: 100%;
+    top: 5170px;
+}
+	.div6>p{
+    color: #FFF;
+    font-family: 'GilroyExtraBold', sans-serif;
+    font-size: 1.375em;
+	font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 45%;
+    height: 50%;
+    margin: auto;
+}
+	.div6>p>a{
+    color: #FFF;
+    font-family: 'GilroyExtraBold', sans-serif;
+    text-decoration: none;
+    display: block;
+    font-weight: 600;
+    margin: 0px;
+}
+
+/*седьмой блок*/
+.div7 {
+    background-color: #4f4f4f;
+    min-height: 20%;
+    position: absolute;
+    width: 100%;
+    top:5489px;
+}
+	.social_media{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 16%;
+	height: 40px;
+    margin: auto;
+}
+	.social_media>a {
+	background: #4f4f4f url(../img/social_media/social_media_icons.png) no-repeat;
+    -webkit-background-size: auto 200%;
+    -moz-background-size: auto 200%;
+    -o-background-size: auto 200%;
+    background-size: auto 200%;
+    text-decoration: none;
+    font-size: 0px;
+    position: relative;
+    float: left;
+    width: 40px;
+    height: 40px;
+	margin: 0 3%;
+}
+	#Beh{  background-position: 0 0px; /* по умолчанию */}
+	#Drib{  background-position: -41px 0px; /* влево 41px */}
+	#Fb{  background-position: -81px 0px; /* влево 81px */}
+	#VK{  background-position: -121px 0px; /* влево 121px */}
+	#Beh:hover{  background-position: 0 -41px; /* наверх 41px */}
+	#Drib:hover{  background-position: -41px -41px; /* влево 41px наверх 41px */}
+	#Fb:hover{  background-position: -81px -41px; /* влево 81px наверх 41px */}
+	#VK:hover{  background-position: -121px -41px; /* влево 121px наверх 41px */}
+
+/*для других расширений*/
+	@media screen and (max-device-width: 1024px){
+		.prj3content {left: 38%;}
+		#prjphoneimg {right: 65px;}
+		.prj1content {right: 7%;}
+		.tekstservice {width: 98%;}
+		.div4>h2 {top: 108px;left: 409px;}
+		.video{width: 627px !important; 	height: 200px !important;}
+		.video_div {margin-top: 9%;}
+		.video_div>a {margin-top: -40%;}
+		.social_media {width: 22%;}
+		.menu .tel {margin-top: 30px;}
+	}
+	
+	@media screen and (max-device-width: 800px){
+		.div7 {top: 5566px;}
+		.social_media {width: 22%;}
+		.video{width: 627px !important; 	height: 200px !important;}
+		.video_div {margin-top: 9%;}
+		.video_div>a {margin-top: -40%;}
+		.tekstservice {width: 103%;}
+		.div4{background-size: auto 14%;top: 3701px;}
+		.div4>h2 {top: 103px;left: 409px;}
+		.prj3content {left: 38%;}
+		#prjphoneimg {right: 65px;}
+		.prj1content {right: 7%;}
+		.scrollbtn1 {left: 40%;bottom: 15px;}
+		.scrollbtn1>a>span {font-size: 3em;}
+		.div1p {font-size: 2.525em;max-width: 800px;}
+		.menu {line-height: 5em;text-align: center;float: none;max-width: 100%;top: 170px;}
+		.logo {max-width: 50%; width: 38%;float: none;}
+		.menu .tel {margin-top: 30px;margin-left: 0em;margin-right: 0em;}
+		.menu>a {font-size: 4em;padding: 30px;}
+		.div1content {top: 52%;}
+		#menuwrapper {top: 3%;}
+		h1 {font-size: 3em;}
+		.div3 {top: 2250px;}
+		.div5 {top: 4378px;}
+		.scrollbtn2 {top: 66%;}
+		.div2 #analitics {margin-top: 85px;}
+		.div2 #strategy {margin-top: 85px;}
+		.div2 #smm {margin-top: 85px;}
+		.div2 #technologies{top: 37%;}
+		.div2 #design{top: 37%;}
+	}
+		
+	 @media screen and (max-device-width: 640px){
+		.social_media{width: 22%;}
+		.div7 {top: 5446px;}
+		.video{width: 627px !important; 	height: 200px !important;}
+		.video_div {margin-top: 9%;}
+		.video_div>a {margin-top: -40%;}
+		.div4>h2 {top: 90px;  left: 407px;}
+		.tekstservice {width: 103%;}
+		.prj3content {left: 38%;}
+		#prjphoneimg {right: 65px;}
+		.prj1content {right: 7%;}
+		.menu .tel {margin-top: 30px;}
+	}
+	
+	 @media screen and (max-device-width: 414px){
+		.div6 {top: 5109px;}
+        .div7 {top: 5642px;}
+        .div6>p {font-size: 3.375em;font-size: 3.375em;width: 60%;height: 77%;}
+	.social_media>a { width: 120px; height: 120px;}
+	.social_media {width: 70%; height: 120px;}
+	#Drib {background-position: -121px 0px;}
+	#Fb {background-position: -243px 0px;}
+	#VK {background-position: -365px 0px;}
+	#Beh:hover{  background-position: 0 -121px;}
+	#Drib:hover{  background-position: -121px -121px;}
+	#Fb:hover{  background-position: -243px -121px;}
+	#VK:hover{  background-position: -365px -121px;}
+	.div5>video {bottom: 515px;}
+	.scrollbtn1 {left: 40%;bottom: 15px;}
+	.scrollbtn1>a>span {font-size: 3em;}
+	.div1p {font-size: 3.525em;max-width: 800px;}
+	.menu {line-height: 5em;text-align: center;float: none;max-width: 100%;top: 170px;}
+	.logo {max-width: 50%; width: 38%;float: none;}
+	.menu .tel {margin-top: 30px;margin-left: 0em;margin-right: 0em;}
+	.menu>a {font-size: 4em;padding: 30px;}
+	.div1content {top: 46%;}
+	}
